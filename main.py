@@ -7,7 +7,7 @@ def f(x):
     return np.exp(-x/4) * np.arctan(x)
 
 def df(x):
-    return return np.arctan(x) - 4 / (x**2 + 1)
+    return np.arctan(x) - 4 / (x**2 + 1)
 
 # regner toppPunkt
 x_max = brentq(df, 1, 3)
@@ -20,5 +20,5 @@ plt.plot(x, f(x))
 plt.plot(x_max, y_max, 'ro', label=f'Toppunkt ({x_max:.4f}, {y_max:.4f})')
 plt.legend()
 plt.grid(True)
-plt.title(r'$f(x) = (4-x)\arctan(x) + \frac{1}{2}\ln(x^2+1)$')
+plt.title(r'$f(x) = e^{-x/4} \cdot \arctan(x)$')
 plt.show()
