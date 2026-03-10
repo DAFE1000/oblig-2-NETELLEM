@@ -7,7 +7,7 @@ def f(x):
     return np.exp(-x/4) * np.arctan(x)
 
 def df(x):
-    return np.exp(-x/4) * (-1/4 * np.arctan(x) + 1/(x**2 + 1))
+    return return np.arctan(x) - 4 / (x**2 + 1)
 
 # regner toppPunkt
 x_max = brentq(df, 1, 3)
